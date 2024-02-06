@@ -16,4 +16,4 @@ Far comparire gli indirizzi email solamente quando sono stati tutti generati.
 - Inizializzata l'app con Vue
 - Richiamo l'API fornita in un ciclo che ripetera n volte
 - La mail volta per volta la aggiungo ad un Array dichiarato globalmente
-- Stampa in un'unica volta l'array così da evitare la comparasa a cascata delle mail generate
+- Stampo l'Array per ogni elemento della sua lunghezza ma lo mostro solo quando ha raggiunto la capienza massima della sua lunghezza
