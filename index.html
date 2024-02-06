@@ -34,13 +34,22 @@
     <script type="text/javascript" src="./js/main.js" defer></script>
   </head>
   <body>
-    <div id="root">
+    <div id="root" class="border m-3 d-flex flex-column align-items-center">
+      <h1 class="text-primary mb-2">Lista della emails</h1>
+      <label>Quante mail vorresti creare ?</label>
+      <input type="number" min="1" max="100" v-model="emailsNumber" />
+      <div>
+        <button @click="generateMails()" class="btn btn-primary m-3">
+          Genera
+        </button>
+        <button @click="emptyMailsArray()" class="btn btn-info">Svuota</button>
+      </div>
       <ul>
         <li
           v-for="(mail,index) in emails"
           v-show="emails.length >= emailsNumber"
         >
-          {{(index+1) + " " + mail}}
+          {{(index+1) + ") " + mail}}
         </li>
       </ul>
     </div>
